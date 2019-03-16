@@ -8,6 +8,13 @@ $ git push origin --force --all
 
 ### Docker
 ````
-docker-compose down && docker-compose build --no-cache && docker-compose up --force-recreate --remove-orphans
-docker kill $(docker ps -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q) 
+$ docker-compose down && docker-compose build --no-cache && docker-compose up --force-recreate --remove-orphans
+$ docker kill $(docker ps -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q) 
 ````
+
+### Networking
+
+```
+# development
+$ lsof -nP +c 15 | grep LISTEN
+```
