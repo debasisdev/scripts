@@ -6,6 +6,11 @@ $ git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch bit
 $ git push origin --force --all
 ````
 
+### Remove all Branches Locally
+````bash
+$ git branch --merged | grep -v \* | xargs git branch -D
+````
+
 ### Docker
 ````
 $ docker-compose down && docker-compose build --no-cache && docker-compose up --force-recreate --remove-orphans
