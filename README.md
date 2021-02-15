@@ -1,5 +1,20 @@
 # Scripts
 
+## macOS Fixes
+
+### Configure Launchpad
+
+````bash
+$ defaults write com.apple.dock springboard-columns -int 5 && defaults write com.apple.dock ResetLaunchPad -bool TRUE && killall Dock
+````
+
+### OneDrive Fix
+
+````bash
+$ find ~/Library/Group\ Containers/ -type d -name OfficeFileCache -exec rm -r {} +
+$ find ~/Library/Containers/ -type d -name OfficeFileCache -exec rm -r {} +
+````
+
 ## GIT
 
 ### GIT change Sensitive File from History
